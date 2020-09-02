@@ -1,0 +1,11 @@
+/.idea
+/target
+*.png
+*.html
+*.iml
+*.xml
+*.bmp
+*.jpg
+*.pdf
+*.gif
+/**/.svn
