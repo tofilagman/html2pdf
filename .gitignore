@@ -2,8 +2,7 @@
 /target
 *.png
 *.html
-*.iml
-*.xml
+*.iml 
 *.bmp
 *.jpg
 *.pdf
