@@ -3,7 +3,9 @@ package gui.ava.html.imagemap;
 import gui.ava.html.BaseTest;
 import gui.ava.html.Html2Image;
 import org.junit.Test;
+import org.springframework.util.ResourceUtils;
 
+import java.io.FileInputStream;
 import java.net.URL;
 
 /**
@@ -37,5 +39,12 @@ public class HtmlImageMapImplTest extends BaseTest {
 		final Html2Image html2Image = Html2Image.fromHtml("<div>HELLO!<a href='javascript: alert(1);'><img src='http://www.google.co.il/intl/en_com/images/srpr/logo1w.png'/></a></div>");
 		html2Image.getImageRenderer().saveImage("image.png");
 		html2Image.getHtmlImageMap().saveImageMapDocument("image.html", "heb.png");
+	}
+
+	@Test
+	public void ljReceipt() throws Exception {
+		final Html2Image html2Image = Html2Image.fromFile(ResourceUtils.getFile(TEST_RECEIPT));
+		html2Image.getImageRenderer().setWidth(300);
+		html2Image.getImageRenderer().saveImage("ljReceipt.png");
 	}
 }

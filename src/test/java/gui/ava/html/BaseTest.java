@@ -10,6 +10,7 @@ import java.net.URL;
  */
 public class BaseTest {
 	public static final String TEST1_PATH = "classpath:test1.html";
+	public static final String TEST_RECEIPT = "classpath:receipt.html";
 
 	public static URL getTest1Url() {
 		try {
@@ -18,4 +19,14 @@ public class BaseTest {
 			throw new RuntimeException(e);
 		}
 	}
+
+	public static URL getReceiptUrl() {
+		try{
+			return ResourceUtils.getURL(TEST_RECEIPT);
+		}catch (FileNotFoundException e){
+			throw new RuntimeException(e);
+		}
+	}
+
+
 }
