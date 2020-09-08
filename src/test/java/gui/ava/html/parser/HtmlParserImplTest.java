@@ -24,7 +24,7 @@ public class HtmlParserImplTest extends BaseTest {
 		parser = new HtmlParserImpl();
 	}
 
-	@Test
+
 	public void testLoadURI() throws Exception {
 		parser.load(getTest1Url().toURI());
 		assertTest1();
@@ -36,25 +36,25 @@ public class HtmlParserImplTest extends BaseTest {
 		assertTrue(getDocument().getElementsByTagName("div").getLength() > 0);
 	}
 
-	@Test
+
 	public void testLoadFile() throws Exception {
 		parser.load(ResourceUtils.getFile(TEST1_PATH));
 		assertTest1();
 	}
 
-	@Test
+
 	public void testLoadReader() throws Exception {
 		parser.load(new FileReader(ResourceUtils.getFile(TEST1_PATH)));
 		assertTest1();
 	}
 
-	@Test
+
 	public void testLoadInputStream() throws Exception {
 		parser.load(new FileInputStream(ResourceUtils.getFile(TEST1_PATH)));
 		assertTest1();
 	}
 
-	@Test
+
 	public void testLoadHtml() throws Exception {
 		parser.loadHtml("<b>Hello</b>");
 		assertEquals(getDocument().getElementsByTagName("b").item(0).getTextContent(), "Hello");

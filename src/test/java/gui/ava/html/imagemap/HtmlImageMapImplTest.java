@@ -12,7 +12,7 @@ import java.net.URL;
  * @author Yoav Aharoni
  */
 public class HtmlImageMapImplTest extends BaseTest {
-	@Test
+
 	public void test1ImageMapDocument() throws Exception {
 		final Html2Image html2Image = Html2Image.fromURL(getTest1Url());
 		html2Image.getImageRenderer().saveImage("test1.png");
@@ -41,7 +41,6 @@ public class HtmlImageMapImplTest extends BaseTest {
 		html2Image.getHtmlImageMap().saveImageMapDocument("image.html", "heb.png");
 	}
 
-	@Test
 	public void ljReceipt() throws Exception {
 		final Html2Image html2Image = Html2Image.fromFile(ResourceUtils.getFile(TEST_RECEIPT));
 		html2Image.getImageRenderer().setWidth(300);
